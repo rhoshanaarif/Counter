@@ -57,7 +57,7 @@ export default function MyApp(){
         <div class = "top">
             
         <h1> Number of Hours Left</h1>
-        <div class="number">{count.hoursremaining || 1000}</div>
+        <div class="number">{count.hoursremaining }</div>
         <button onClick={decrement}>-</button>
         <button onClick={increment}>+</button>
         <button onClick={reset}>RESET</button>
