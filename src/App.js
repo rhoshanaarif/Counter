@@ -8,7 +8,7 @@ export default function MyApp(){
 
   const fetchCount = () => {
     axios
-      .get("http://localhost:3005/api/count") // Replace this with the actual API endpoint to get students
+      .get("api/count") // Replace this with the actual API endpoint to get students
       .then((response) => {
         // Filter students with null 'class' field
          const count = response.data
@@ -20,17 +20,17 @@ export default function MyApp(){
       });
   };
   const decrement = () => {
-    axios.get("http://localhost:3005/api/count/decrease")
+    axios.get("api/count/decrease")
     .then((response) => {
       console.log(response);
     })
-    .catch((erro) => {
+    .catch((error) => {
       console.error(error);
     })
   }
 
   const increment = () => {
-    axios.get("http://localhost:3005/api/count/increase")
+    axios.get("api/count/increase")
     .then((response) => {
       console.log(response);
     })
@@ -39,7 +39,7 @@ export default function MyApp(){
     })
   }
   const reset = () => {
-    axios.get("http://localhost:3005/api/count/reset")
+    axios.get("api/count/reset")
     .then((response) => {
       console.log(response);
     })
@@ -51,7 +51,7 @@ export default function MyApp(){
         <div class = "top">
             
         <h1> Number of Hours Left</h1>
-        <div class="number">{count.hoursremaining}</div>
+        <div class="number">{count.hoursremaining || 1000}</div>
         <button onClick={decrement}>-</button>
         <button onClick={increment}>+</button>
         <button onClick={reset}>RESET</button>
