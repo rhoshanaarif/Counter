@@ -23,6 +23,8 @@ export default function MyApp(){
     axios.get("api/count/decrease")
     .then((response) => {
       console.log(response);
+      const count = response.data
+      setCount(count);
     })
     .catch((error) => {
       console.error(error);
@@ -33,6 +35,8 @@ export default function MyApp(){
     axios.get("api/count/increase")
     .then((response) => {
       console.log(response);
+      const count = response.data
+      setCount(count);
     })
     .catch((error) => {
       console.error(error);
@@ -42,6 +46,8 @@ export default function MyApp(){
     axios.get("api/count/reset")
     .then((response) => {
       console.log(response);
+      const count = response.data
+      setCount(count);
     })
     .catch((error) => {
       console.error(error);
