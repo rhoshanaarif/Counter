@@ -5,7 +5,11 @@ var cors = require('cors')
 const routes = require('./routes/router.js');
 connectDB();
 const PORT = process.env.PORT || 3005;
-app.use(cors());
+const corsOptions = {
+    origin: 'https://counter-frontend-cgu0.onrender.com',
+    optionsSuccessStatus: 200, // Some legacy browsers choke on a 204 response.
+  };
+app.use(cors(corsOptions));
 app.get('/', (req, res) => {
     res.send("hello");
 })
