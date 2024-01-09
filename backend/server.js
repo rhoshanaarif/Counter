@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3005;
 
 
 app.get('/', (req, res) => {
-    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Origin", "true");
     res.send("Api is running")
 })
 app.use('/api', routes)
