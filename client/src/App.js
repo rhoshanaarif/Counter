@@ -8,7 +8,7 @@ export default function MyApp(){
 
   const fetchCount = () => {
     axios
-      .get("api/count") // Replace this with the actual API endpoint to get students
+      .get("https://counter-backend-llqx.onrender.com/api/count") // Replace this with the actual API endpoint to get students
       .then((response) => {
         // Filter students with null 'class' field
          const count = response.data
@@ -20,7 +20,7 @@ export default function MyApp(){
       });
   };
   const decrement = () => {
-    axios.get("api/count/decrease")
+    axios.get("https://counter-backend-llqx.onrender.com/api/count/decrease")
     .then((response) => {
       console.log(response);
       const count = response.data
@@ -32,7 +32,7 @@ export default function MyApp(){
   }
 
   const increment = () => {
-    axios.get("api/count/increase")
+    axios.get("https://counter-backend-llqx.onrender.com/api/count/increase")
     .then((response) => {
       console.log(response);
       const count = response.data
@@ -43,7 +43,7 @@ export default function MyApp(){
     })
   }
   const reset = () => {
-    axios.get("api/count/reset")
+    axios.get("https://counter-backend-llqx.onrender.com/api/count/reset")
     .then((response) => {
       console.log(response);
       const count = response.data
