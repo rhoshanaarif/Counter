@@ -6,11 +6,10 @@ const routes = require('./routes/router.js');
 connectDB();
 const PORT = process.env.PORT || 3005;
 
-app.use(cors({
-    origin: 'https://counter-frontend-cgu0.onrender.com' // Update with your frontend URL
-  }));
+
 app.get('/', (req, res) => {
-    res.send("hello");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.send("Api is running")
 })
 app.use('/api', routes)
 app.listen(PORT)
