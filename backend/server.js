@@ -6,6 +6,8 @@ const routes = require('./routes/router.js');
 connectDB();
 const PORT = process.env.PORT || 3005;
 app.use(cors());
-
+app.get('/', (req, res) => {
+    res.send("hello");
+})
 app.use('/api', routes)
 app.listen(PORT)
