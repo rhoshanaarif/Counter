@@ -6,7 +6,7 @@ const routes = require('./routes/router.js');
 connectDB();
 const PORT = process.env.PORT || 3005;
 const corsOptions = {
-    origin: 'https://counter-frontend-cgu0.onrender.com',
+    origin: 'http://counter-frontend-cgu0.onrender.com',
     optionsSuccessStatus: 200, // Some legacy browsers choke on a 204 response.
   };
 app.use(cors(corsOptions));
